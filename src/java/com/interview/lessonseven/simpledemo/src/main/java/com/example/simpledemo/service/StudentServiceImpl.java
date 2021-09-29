@@ -56,6 +56,7 @@ public class StudentServiceImpl implements StudentService{
         if (savedStudent == null) {
             throw new RuntimeException("Student " + dto.getName() + " not found");
         }
+        savedStudent.setAge(dto.getAge());
         studentRepository.save(savedStudent);
     }
 

@@ -10,10 +10,12 @@
     <tr>
         <td>Name</td>
         <td>Age</td>
+        <td>Action</td>
     </tr>
     <tr th:each="student : ${students}">
         <td th:text="${student.name}">Testname</td>
         <td th:text="${student.age}">25</td>
+        <td><a th:href="@{/students/edit/{name}(name=${student.name})}">Edit</a></td>
     </tr>
 </table>
 <a th:href="@{/students/new}">Add new</a>
