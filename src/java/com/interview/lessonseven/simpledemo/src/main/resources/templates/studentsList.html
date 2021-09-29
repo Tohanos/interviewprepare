@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Students list</title>
+</head>
+<body>
+
+<table border="1">
+    <tr>
+        <td>Name</td>
+        <td>Age</td>
+    </tr>
+    <tr th:each="student : ${students}">
+        <td th:text="${student.name}">Testname</td>
+        <td th:text="${student.age}">25</td>
+    </tr>
+</table>
+<a th:href="@{/students/new}">Add new</a>
+
+</body>
+</html>
